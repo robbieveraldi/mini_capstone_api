@@ -2,7 +2,7 @@
 GET http://localhost:3000/products.json
 
 ### Products Show Action
-GET http://localhost:3000/product/1.json
+GET http://localhost:3000/product/6.json
 
 ### Products Create Action
 POST http://localhost:3000/products.json
@@ -14,3 +14,17 @@ Content-Type: application/json
 "image_url": "test image",
 "description": "test description"
 }
+
+### Prodcut Update Action
+PATCH http://localhost:3000/products/6.json
+Content-Type: application/json
+
+{
+"name": "Sponge",
+"price": "1", 
+"image_url": "sponge_image",
+"description": "clean dishes with this sponge"
+}
+
+### Product Destroy Action
+DELETE http://localhost:3000/products/6.json
