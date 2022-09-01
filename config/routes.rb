@@ -15,6 +15,13 @@ Rails.application.routes.draw do
   get "/dawn_soap", controller: "products", action: "dawn_soap"
 
   get "tide_pods", controller: "products", action: "tide_pods"
+
+  #find any product using the id --> localhost:3000/one_product/1
+  get "/product/:id" => "products#show"
+
+  get "/products" => "products#index"
+
+  post "/products" => "products#create"
 end
 
 #alternate way to write this:
