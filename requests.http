@@ -9,20 +9,20 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "test name",
-"price": "4", 
-"image_url": "test image",
-"description": "test description"
+"name": "t name",
+"price": "5", 
+"image_url": "t image",
+"description": "t description"
 }
 
 ### Prodcut Update Action
-PATCH http://localhost:3000/products/6.json
+PATCH http://localhost:3000/products/3.json
 Content-Type: application/json
 
 {
 "name": "Sponge",
-"price": "1", 
-"image_url": "sponge_image",
+"price": "2", 
+"image_url": "sponge_picture",
 "description": "clean dishes with this sponge"
 }
 
