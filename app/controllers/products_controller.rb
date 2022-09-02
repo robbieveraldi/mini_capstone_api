@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 
   def show
     product = Product.find_by(id: params["id"])
-    render json: product
+    render json: product.as_json(methods: [:is_discounted?])
   end
 
   def index
