@@ -7,4 +7,9 @@ class Product < ApplicationRecord
     end
     discounted
   end
+
+  def tax
+    tax = price.to_i * 0.09
+    "The tax is #{tax}."
+  end
 end
