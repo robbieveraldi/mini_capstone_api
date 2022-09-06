@@ -9,21 +9,21 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "t name",
-"price": "5", 
-"image_url": "t image",
-"description": "t description"
+"name": "pants",
+"price": "15", 
+"image_url": "pants.picture.jpg",
+"description": "pants description"
 }
 
 ### Prodcut Update Action
-PATCH http://localhost:3000/products/3.json
+PATCH http://localhost:3000/products/9.json
 Content-Type: application/json
 
 {
-"name": "Sponge",
-"price": "2", 
-"image_url": "sponge_picture",
-"description": "clean dishes with this sponge"
+"name": "Spongebob Pants",
+"price": "20", 
+"image_url": "sponge_pants",
+"description": "who lives in a pineapple under the sea"
 }
 
 ### Product Destroy Action
