@@ -4,6 +4,7 @@
   price: @product.price,
   image_url: @product.image_url,
   description: @product.description,
+  supplier: @product.supplier
   created_at: @product.created_at,
   updated_at: @product.updated_at,
 }
