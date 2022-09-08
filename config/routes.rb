@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post "/suppliers" => "suppliers#create"
   patch "/suppliers/:id" => "suppliers#update"
   delete "/suppliers/:id" => "suppliers#destroy"
+
+  #user routes
+  post "/users" => "users#create"
 end
 
 #supplier routes

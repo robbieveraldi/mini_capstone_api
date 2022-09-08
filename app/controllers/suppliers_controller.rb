@@ -5,16 +5,15 @@ class SuppliersController < ApplicationController
   end
 
   def index
-    @supplier = supplierall
+    @supplier = Supplier.all
     render template: "suppliers/index"
   end
 
   def update
     @supplier = supplier.find_by(id: params["id"])
     @supplier.name = params["name"] || @supplier.name
-    @supplier.price = params["price"] || @supplier.price
-    @supplier.image_url = params["image_url"] || @supplier.image_url
-    @supplier.description = params["description"] || @supplier.description
+    @supplier.email = params["email"] || @supplier.email
+    @supplier.phone_number = params["phone_number"] || @supplier.phone_number
 
     if @supplier.save
       render template: "suppliers/show"
