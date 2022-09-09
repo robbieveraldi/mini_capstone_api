@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+  
   def show
     @product = Product.find_by(id: params["id"])
     render template: "products/show"
@@ -6,22 +8,27 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    pp current_user
     render template: "products/index"
   end
 
   def create
-    @product = Product.new(
-      name: params["name"],
-      price: params["price"],
-      description: params["description"],
-      inventory: params["inventory"],
-      supplier_id: params["supplier_id"],
-    )
-    if @product.save
-      Image.create(url: params["image_url"], product_id: @product.id)
-      render template: "products/show"
+    if current_user && current_user.admin
+      @product = Product.new(
+        name: params["name"],
+        price: params["price"],
+        description: params["description"],
+        inventory: params["inventory"],
+        supplier_id: params["supplier_id"],
+      )
+      if @product.save
+        Image.create(url: params["image_url"], product_id: @product.id)
+        render template: "products/show"
+      else
+        render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+      end
     else
-      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+      render json: {} status: :unauthorized
     end
   end
 

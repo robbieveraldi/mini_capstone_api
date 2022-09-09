@@ -73,3 +73,41 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "user1@test.com",
+  "password": "password"
+}
+
+### ??
+# POST http://localhost:3000/photos.json
+# Authorization: Bearer yJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI3NDQwNjB9.HYaw0fKkXJYW8pdGbWM5uiJzWEQ4tJw3Btazvw6yw3o
+# Content-Type: application/json
+
+# {
+#   "name": "Test name",
+#   "width": 640,
+#   "height": 480
+# }
+
+### Orders Create Action
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjY3MjF9.LD8Gn5i-m1ajyrb7WNgz-SUL_JrK-Yx-Xtw0n3PRgP4
+Content-Type: application/json
+
+{
+  "product_id": 2,
+  "quantity": 3
+}
+
+### Orders Show Action
+GET http://localhost:3000/orders/1.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjY3MjF9.LD8Gn5i-m1ajyrb7WNgz-SUL_JrK-Yx-Xtw0n3PRgP4
+
+### Orders Index Action
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjY3MjF9.LD8Gn5i-m1ajyrb7WNgz-SUL_JrK-Yx-Xtw0n3PRgP4
