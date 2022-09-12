@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzYxNDV9.bkjJPTrEseEokhR-EP29l7GQATLeJX0_B7sUiIFWxfo
+
 ### Products Index Action
 GET http://localhost:3000/products.json
 
@@ -6,13 +8,14 @@ GET http://localhost:3000/products/1.json
 
 ### Products Create Action
 POST http://localhost:3000/products.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-"name": "pants",
-"price": "15", 
-"image_url": "pants.picture.jpg",
-"description": "pants description"
+"name": "bracelet",
+"price": "40", 
+"image_url": "bracelet.picture.jpg",
+"description": "bracelet description"
 }
 
 ### Prodcut Update Action

@@ -24,6 +24,7 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_admin
+    pp current_user
     unless current_user && current_user.admin
       render json: {}, status: :unauthorized
     end

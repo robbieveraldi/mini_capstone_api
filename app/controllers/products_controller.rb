@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
-  
+
   def show
     @product = Product.find_by(id: params["id"])
     render template: "products/show"
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
         render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
       end
     else
-      render json: {} status: :unauthorized
+      render json: {}, status: :unauthorized
     end
   end
 
