@@ -1,7 +1,7 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzYxNDV9.bkjJPTrEseEokhR-EP29l7GQATLeJX0_B7sUiIFWxfo
 
 ### Products Index Action
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=absorbent
 
 ### Products Show Action
 GET http://localhost:3000/products/1.json

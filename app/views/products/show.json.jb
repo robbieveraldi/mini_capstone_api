@@ -5,6 +5,7 @@
   images: @product.images,
   description: @product.description,
   supplier: @product.supplier,
+  categories: @product.categories,
   created_at: @product.created_at,
   updated_at: @product.updated_at,
 }
