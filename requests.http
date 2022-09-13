@@ -114,3 +114,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjY3M
 ### Orders Index Action
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjY3MjF9.LD8Gn5i-m1ajyrb7WNgz-SUL_JrK-Yx-Xtw0n3PRgP4
+
+### Carted Product Create Action
+POST http://localhost:3000/cartedproducts.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjMxNzkwMTF9.85cI09bYgZr-UVaCcVteUYWex0uCDD0Gij7B3qQig0M
+Content-Type: application/json
+
+{
+  "product_id": 5,
+  "quantity": 8
+}
+
+### Carted Product Index Action
+GET http://localhost:3000/cartedproducts.json
